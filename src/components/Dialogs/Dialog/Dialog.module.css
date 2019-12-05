@@ -1,0 +1,12 @@
+.dialogsItems {
+  padding: 10px;
+}
+.dialogsItems h2 {
+  margin: 0px;
+}
+.dialogsItems .active {
+  color: gold;
+  text-decoration: none;
+}
+.dialog {
+}

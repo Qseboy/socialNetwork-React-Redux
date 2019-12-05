@@ -19,10 +19,10 @@ const App = () => {
           <Login />
           <Navbar />
           <div className="app-wrapper-content">
-            <Route path="/Dialogs" component={Dialogs} />
-            <Route path="/Profile" component={Profile} />
-            <Route path="/News" component={News} />
-            <Route path="/Settings" component={Settings} />
+            <Route path="/dialogs" component={Dialogs} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/news" component={News} />
+            <Route path="/settings" component={Settings} />
           </div>
         </div>
       </div>

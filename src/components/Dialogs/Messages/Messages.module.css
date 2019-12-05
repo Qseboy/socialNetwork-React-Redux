@@ -1,0 +1,14 @@
+.messagesItems {
+  padding: 10px;
+}
+.message {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
