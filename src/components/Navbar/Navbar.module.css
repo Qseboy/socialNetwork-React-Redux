@@ -2,15 +2,18 @@
   grid-area: n;
   background-color: rgb(17, 16, 16);
 }
-.nav a {
-  text-decoration: none;
-  color: rgb(219, 79, 79);
-  font-size: 20px;
-}
 .item {
   text-align: center;
   font-size: 22px;
   font-weight: 600;
   font-family: "Courier New", Courier, monospace;
   margin: 10px 0px;
+}
+.item a {
+  text-decoration: none;
+  color: rgb(219, 79, 79);
+  font-size: 20px;
+}
+.item a.active {
+  color: gold;
 }

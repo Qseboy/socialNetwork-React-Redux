@@ -4,7 +4,7 @@ import s from "./Dialogis.module.css";
 const Dialogs = props => {
   return (
     <div>
-      <a>Dialogs</a>
+      <h2>Dialogs</h2>
     </div>
   );
 };
