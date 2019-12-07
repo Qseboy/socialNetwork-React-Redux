@@ -1,23 +1,12 @@
 import React from "react";
 import s from "./Profile.module.css";
-import avatar from "./avatar.png";
 import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/Profilenfo";
 
 const Profile = props => {
   return (
     <div>
-      <div className={s.container}>
-        <div>
-          <img src={avatar} className={s.avatar}></img>
-        </div>
-        <h2>{props.name}</h2>
-      </div>
-      <div className={s.userData}>
-        <p>Data:</p>
-        <p>City:</p>
-        <p>Education:</p>
-        <p>Web Site:</p>
-      </div>
+      <ProfileInfo />
       <MyPosts />
     </div>
   );
