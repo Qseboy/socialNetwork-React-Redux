@@ -12,13 +12,15 @@ const DialogsItem = props => {
   );
 };
 
-const Dialog = () => {
+const Dialog = props => {
+  let dialogsElement = props.dialog.map(d => (
+    <DialogsItem name={d.name} id={d.id} />
+  )); //создается массив, корый мапит старый, и переберает каждый элемент массива
+
   return (
     <div className={s.dialogsItems}>
       <h2>Dialogs</h2>
-      <DialogsItem name="Kolyan" id="1" />
-      <DialogsItem name="Ivan" id="2" />
-      <DialogsItem name="Leha" id="3" />
+      {dialogsElement}
     </div>
   );
 };

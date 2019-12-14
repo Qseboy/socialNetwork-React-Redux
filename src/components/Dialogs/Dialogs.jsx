@@ -6,9 +6,10 @@ import Messages from "./Messages/Messages";
 const Dialogs = props => {
   return (
     <div className={s.dialogs}>
-      <Dialog />
-      <Messages />
+      <Dialog dialog={props.dialog} />
+      <Messages message={props.message} />
     </div>
   );
 };
+wdw;
 export default Dialogs;
