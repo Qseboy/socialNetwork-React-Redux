@@ -15,7 +15,7 @@ const Messages = props => {
         <div>
           <img className={s.logo} src={logo} />
         </div>
-        {newMessage}
+        <div>{newMessage}</div>
       </div>
     </div>
   );

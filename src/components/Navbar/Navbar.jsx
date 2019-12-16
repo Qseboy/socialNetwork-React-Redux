@@ -25,6 +25,11 @@ const Navbar = () => {
           Settings
         </NavLink>
       </div>
+      <div className={s.item}>
+        <NavLink activeClassName={s.active} to="/space">
+          Space
+        </NavLink>
+      </div>
     </nav>
   );
 };

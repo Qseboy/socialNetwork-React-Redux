@@ -16,7 +16,23 @@ let state = {
       { id: 1, message: "hi" },
       { id: 2, message: "hellow" }
     ]
+  },
+  spacePage: {
+    space: [
+      { id: 1, name: "space" },
+      { id: 2, name: "spaceTwo" }
+    ]
   }
+};
+
+export let addPost = postMessage => {
+  let newPost = {
+    id: 4,
+    message: postMessage,
+    likeCounts: 44
+  };
+  state.profilePage.post.push(newPost);
+  debugger;
 };
 
 export default state;

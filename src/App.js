@@ -6,6 +6,7 @@ import Profile from "./components/Profile/Profile";
 import Login from "./components/Login/Login";
 import Dialogs from "./components/Dialogs/Dialogs";
 import News from "./components/News/News";
+import Space from "./components/Space/Space";
 
 import { Route, BrowserRouter } from "react-router-dom";
 import Settings from "./components/Settings/Settings";
@@ -25,8 +26,18 @@ const App = props => {
             />
             <Route
               path="/profile"
-              render={() => <Profile state={props.state.profilePage} />}
+              render={() => (
+                <Profile
+                  state={props.state.profilePage}
+                  addPost={props.addPost}
+                />
+              )}
             />
+            <Route
+              path="/space"
+              render={() => <Space state={props.state.spacePage} />}
+            />
+
             <Route path="/news" component={News} />
             <Route path="/settings" component={Settings} />
           </div>
