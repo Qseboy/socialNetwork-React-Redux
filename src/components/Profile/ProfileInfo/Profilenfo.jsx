@@ -7,7 +7,7 @@ const ProfileInfo = props => {
     <div>
       <div className={s.container}>
         <div>
-          <img src={avatar} className={s.avatar}></img>
+          <img src={avatar} alt="avatar" className={s.avatar}></img>
         </div>
         <h2>{props.name}</h2>
       </div>

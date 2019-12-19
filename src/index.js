@@ -1,16 +1,23 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+import state, { subscribe } from "./redux/state";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
-import state from "./redux/state";
 import { addPost } from "./redux/state";
+import { newPostMessage } from "./redux/state";
 
-ReactDOM.render(
-  <App state={state} addPost={addPost} />,
-  document.getElementById("root")
-);
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+//Прорисовка UI Tree(Дерева)
+let rerenderApp = () => {
+  ReactDOM.render(
+    <App state={state} addPost={addPost} newPostMessage={newPostMessage} />,
+    document.getElementById("root")
+  );
+};
+
+//Вызов прорисовки, в файле render лежит функция.
+rerenderApp(state);
+
+subscribe(rerenderApp); //Вызываю функцию, callback fun subscribe которая вызывает rerenderApp
+
 serviceWorker.unregister();

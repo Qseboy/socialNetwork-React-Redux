@@ -10,16 +10,24 @@ const MyPosts = props => {
   let newPostElement = React.createRef(); //объявление ссылки
   let addPost = () => {
     let text = newPostElement.current.value;
-    alert(text);
-    debugger;
-    props.addPost("hi");
+    props.addPost(text); //Передал addPost функцию пропсами, из файла state
+    newPostElement.current.value = ""; //зануление
+  };
+
+  let changePostMessage = () => {
+    let text = newPostElement.current.value;
+    props.newPostMessage(text);
   };
 
   return (
     <div className={s.MyPosts}>
       <h2>My posts</h2>
       <div className={s.form}>
-        <input placeholder="Your news" ref={newPostElement}></input>
+        <input
+          onChange={changePostMessage}
+          placeholder="Your news"
+          ref={newPostElement}
+        ></input>
       </div>
       <div className={s.sendPostKey}>
         <button onClick={addPost}>Send</button>

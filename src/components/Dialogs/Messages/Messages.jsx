@@ -13,7 +13,7 @@ const Messages = props => {
     <div className={s.messagesItems}>
       <div className={s.message}>
         <div>
-          <img className={s.logo} src={logo} />
+          <img className={s.logo} alt="logo" src={logo} />
         </div>
         <div>{newMessage}</div>
       </div>
